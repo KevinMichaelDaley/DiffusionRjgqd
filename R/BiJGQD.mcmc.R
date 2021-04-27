@@ -9,7 +9,7 @@ BiJGQD.mcmc=function(X,time,mesh=10,theta,sds,updates=10,burns=min(round(updates
 
   theta = theta+runif(length(theta),0.001,0.002)*sign(theta)
   T.seq=time
-  Dtypes =c('Saddlepoint','Edgeworth','Normal')
+  Dtypes =c('Saddlepoint','Normal')
   Dindex = which(Dtypes==Dtype)
 
   JDtypes=c('Normal','MVNormal')
@@ -1758,7 +1758,6 @@ MAT2=rbind(
     class(ret) = 'JGQD.mcmc'
     return(ret)
   }
-
 
 
 
