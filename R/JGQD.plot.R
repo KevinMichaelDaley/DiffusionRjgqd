@@ -80,16 +80,9 @@ JGQD.plot=function(x,thin=1,burns,h=FALSE,palette='mono')
 
   if(class(x)=='JGQD.density')
   {
-    if(requireNamespace('rgl', quietly = TRUE))
-    {
-      open3d(windowRect=c(50,50,640+50,50+640),zoom=0.95)
-      persp3d(x=x$Xt,y=x$time,z=x$density,col='white',box=FALSE,xlab='State (X_t)',ylab='Time (t)',zlab='Density f(X_t|X_s)')
-      # play3d(spin3d(axis=c(0,0,1), rpm=3), duration=10)
-    }else
-    {
-
+   
       persp(x=x$Xt,y=x$time,z=x$density,col='white',xlab='State (X_t)',ylab='Time (t)',zlab='Density f(X_t|X_s)',border=NA,shade=0.5,theta=145)
-    }
+    
   }
 
 
