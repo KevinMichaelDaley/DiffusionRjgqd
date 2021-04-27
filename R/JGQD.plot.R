@@ -80,9 +80,10 @@ JGQD.plot=function(x,thin=1,burns,h=FALSE,palette='mono')
 
   if(class(x)=='JGQD.density')
   {
-   
-      persp(x=x$Xt,y=x$time,z=x$density,col='white',xlab='State (X_t)',ylab='Time (t)',zlab='Density f(X_t|X_s)',border=NA,shade=0.5,theta=145)
     
+
+      persp(x=x$Xt,y=x$time,z=x$density,col='white',xlab='State (X_t)',ylab='Time (t)',zlab='Density f(X_t|X_s)',border=NA,shade=0.5,theta=145)
+   
   }
 
 
